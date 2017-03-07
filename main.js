@@ -1,4 +1,4 @@
-// console.log("hello");
+console.log("first line in JS file", Date.now());
 
 var dinoContainer = document.getElementById("dinoContainer");
 
@@ -18,14 +18,13 @@ function makeDom(xhrData) {
 	  dinosaursString += `</div></div></div>`
 	}
 	dinoContainer.innerHTML = dinosaursString;
-
-
 }
 
 
 function executeThisCodeAfterFileLoaded(){
+	console.log("Data Returned: ", Date.now());
 	var data =JSON.parse(this.responseText);
-	console.log("it worked!", data);
+	// console.log("it worked!", data);
 	makeDom(data);
 }
 
@@ -40,22 +39,25 @@ function executeThisCodeAfterFileFails(){
 var myRequest = new XMLHttpRequest();
 //add things with dot notation to an event listener. 
 
-myRequest.addEventListener("load", executeThisCodeAfterFileLoaded);
+myRequest.addEventListener("load", executeThisCodeAfterFileLoaded); // happens when the file has completed reading the JSON file
 myRequest.addEventListener("error", executeThisCodeAfterFileFails);
 
 // How to get into the file. we are "GET" it ...
 //GET, POST, PUT, DElETE
 //this just initailizes the request GEt request "open and not execute"
 
-myRequest.open("GET", "dinosaurs.json");
+myRequest.open("GET", "dinosaurs.json"); // HW this is where your tree house profile link will go.... 
+
 
 //makes request happen, sue the "send" method to execute  
 
 myRequest.send();
 
+console.log("last line in JS file", Date.now());
+
 // console to see the call or request
 
-console.log("myRequest", myRequest);
+// console.log("myRequest", myRequest);
 
 // for a request you will always have 5 lines of code at least ... And MUST be in this order.
 
