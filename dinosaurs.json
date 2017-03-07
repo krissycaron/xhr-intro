@@ -1,0 +1,23 @@
+{
+	"dinosaurs": [
+		{
+			"name": "Rex",
+			"type": "T-Rex",
+			"food": "smaller Dinos",
+			"url":"http://www.ripleys.com/extras/wp-content/uploads/sites/24/2015/04/metal-t-rex.jpg" 
+		},
+		{
+			"name": "pterodactyl",
+			"type": "Flyier",
+			"food": "Giant Bugs",
+			"url":"http://www.samdowning.com/wp-content/uploads/2011/05/pterodactyl.jpg" 
+		},
+		{
+			"name": "Nothosaurus",
+			"type": "swimmer",
+			"food": "fish",
+			"url":"http://palaeos.com/vertebrates/sauropterygia/images/Nothosaurus1.jpg" 
+		}
+	]  
+}
+
